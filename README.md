@@ -26,6 +26,10 @@ The speed of cleaning subdirectories can vary significantly and is primarily dow
 
 The application will create an empty `.cleaned` file within each subdirectory to inform future instances of the application that the directory has previously been considered within a scan. A quick check of this file will prevent the application from performing an in-depth scan of the files within the directory tree. On finding a subdirectory *without* a `.cleaned` file, the application will look at the previous (cleaned) directory within the list and start cleaning from this point onwards. It is entirely possible that a previously cleaned directory will be erased as a result of this behaviour. This behaviour can be overridden by specifying a `--forced` flag, causing each directory to undergo a file content check.
 
+### Preserving subdirectories
+
+A directory tree may be preserved by storing a `.cleaner-keep` file within a subdirectory. This will cause the application to skip the subdirectory and resume checks on the next subdirectory.
+
 ## Usage
 
 The directory cleaner can be called using:

@@ -108,6 +108,11 @@ if __name__ == "__main__":
         # Take an item from the top of the list
         item2 = dirList.pop(0)
 
+        # Keep this directory?
+        if os.path.isfile(os.path.join(item2, ".cleaner-keep")):
+            continue
+        
+        # Run comparison
         if not are_trees_equal(item1, item2):
             # They're different
             if verbose:
