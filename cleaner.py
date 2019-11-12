@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""cleaner.py: A diff-based directory cleaner"""
+
+__author__ = "Andrew Hills <ahills60@gmail.com>"
+
 import filecmp
 import os
 import shutil
