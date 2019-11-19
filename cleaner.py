@@ -90,7 +90,7 @@ if __name__ == "__main__":
         if not os.path.isfile(os.path.join(item, ".cleaned")):
             if idx > 0:
                 startFrom = idx - 1
-            break
+                break
     
     if startFrom is not None:
         dirList = dirList[startFrom:]
