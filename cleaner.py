@@ -88,12 +88,11 @@ if __name__ == "__main__":
     startFrom = None
     for idx, item in enumerate(dirList):
         if not os.path.isfile(os.path.join(item, ".cleaned")):
-            print("Here {}".format(idx))
             if idx > 0:
                 startFrom = idx - 1
             break
     
-    if startFrom:
+    if startFrom is not None:
         dirList = dirList[startFrom:]
     else:
         # Nothing to do. Continue regardless?
