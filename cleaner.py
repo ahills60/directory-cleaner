@@ -50,7 +50,7 @@ if __name__ == "__main__":
         dirs_cmp = filecmp.dircmp(dir1, dir2)
         if (
             len([item for item in dirs_cmp.left_only if item != ".cleaned"]) > 0
-            or len([item for item in dirs_cmp.right_only if item != ".cleaned") > 0
+            or len([item for item in dirs_cmp.right_only if item != ".cleaned"]) > 0
             or len([item for item in dirs_cmp.funny_files if item != ".cleaned"]) > 0
         ):
             return False
